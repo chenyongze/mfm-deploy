@@ -1,0 +1,20 @@
+问题:
+1.静态资源部署到七牛云服务器时，其他文件格式是否需要,修改头信息
+    node_modules/fis/node_modules/fis-command-release/lib/deploy.js
+    node_modules/fis/node_modules/fis-command-release/lib/qiniu.coffee
+    lib/cmd/ModuleDeploy.coffee
+
+1.x
+    o.ld命令 显示描述
+    o.sm、dm命令 检测当前为空文件夹
+    o.ld命令 不限定目录
+
+2.x
+    o.工程管理、部署整个项目
+
+
+mfm sm common -c <12>                   # 部署到模板服务器12号通道
+mfm dm common -r --release              # 部署到同步区域
+
+样式的调整
+图片站

@@ -1,0 +1,66 @@
+{
+    "//" : [
+        " ********************************* ",
+        " fis (1.6.3) and                   ",
+        " fis-postpackager-seajs(0.0.1)     ",
+		" tow package are not install !!!   ",
+        " ********************************* "
+    ],
+    "name": "mfe",
+    "version": "0.1.1",
+    "description": "mfe Front-end Integrated Solution",
+    "main": "mfe.js",
+    "bin": [
+        "bin/mft",
+        "bin/mfutil",
+        "bin/mfe",
+        "bin/mfe2static",
+        "bin/mfm"
+    ],
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "http://git.mofang.com/zhangzhiwei/mfe-cli"
+    },
+    "keywords": [],
+    "author": {
+        "name": "lynn",
+        "name": "zhaoshuai",
+        "name": "pangshiqi"
+    },
+    "license": "MIT",
+    "dependencies": {
+        "final-fs":"*",
+	    "inquirer":"*",
+        "request":"*",
+        "cheerio":"*",
+        "html":"*",
+        "qiniu":"*",
+        "fs-extra":"*",
+        "colors":"*",
+        "assert-plus":"*",
+        "node-dir": "*",
+        "async": "*",
+        "okay": "*",
+        "underscore": "*",
+        "underscore.string":"*",
+        "shelljs": "*",
+        "walk": "*",
+        "gitlab": "*",
+        "commander": "*",
+        "fis-parser-coffee-script": "*",
+        "fis-parser-less": "*",
+        "fis-parser-utc": "*",
+        "fis-parser-marked":"*",
+        "fis-optimizer-html-minifier":"*",
+        "fis-optimizer-html-compress":"*",
+        "fis-postprocessor-jswrapper":"*"
+    },
+    "bugs": {
+        "url": "http://git.mofang.com/zhangzhiwei/mfe-cli/issues"
+    },
+    "readme": "mf Front-end Integrated Solution",
+    "readmeFilename": "README.md"
+}

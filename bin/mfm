@@ -1,0 +1,4 @@
+#!/usr/bin/env node
+require('../mfm.js').run(process.argv);
+
+//console.log ("mfm 已经废弃，请使用 mft (mofang toolkit)");

@@ -1,0 +1,3 @@
+#!/usr/bin/env node
+
+require('../mfe2static.js').run(process.argv);

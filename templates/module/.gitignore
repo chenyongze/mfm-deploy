@@ -1,0 +1,68 @@
+# Windows image file caches
+Thumbs.db
+ehthumbs.db
+
+# Folder config file
+Desktop.ini
+
+# Recycle Bin used on file shares
+$RECYCLE.BIN/
+
+
+###OSX###
+.DS_Store
+.AppleDouble
+.LSOverride
+
+
+# Files that might appear on external disk
+.Spotlight-V100
+.Trashes
+
+###Node###
+lib-cov
+*.seed
+*.log
+*.csv
+*.dat
+*.out
+*.pid
+*.gz
+
+npm-debug.log
+###vim###
+
+.*.s[a-w][a-z]
+*.un~
+Session.vim
+.netrwhist
+*~
+###Emacs###
+*~
+\#*\#
+/.emacs.desktop
+/.emacs.desktop.lock
+.elc
+auto-save-list
+tramp
+.\#*
+
+# Org-mode
+.org-id-locations
+*_archive
+
+###SublimeText###
+
+# SublimeText project files
+*.sublime-workspace
+
+###########################
+### user data directory ###
+###########################
+
+###########################
+### fis-conf.js ###
+###########################
+fis-conf.js
+
+
