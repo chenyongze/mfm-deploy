@@ -33,16 +33,13 @@ class ModuleStart extends ModulePrepareDirectory
     "receiver_templates": "http://templates.mofang.com/receiver.php",
     "output_templates": "channel/#{channelId}",
     "name": "templates_server"
-}
-"""
-    	    deployFilename = "#{work_dir}/deploy/#{uname}/templates_server.json"
-    	    fs.writeFileSync deployFilename,deployContent
-
-    	    # 提示正在使用模板服务器
-    	    if @cmd.channel
-        		console.log "\n正在使用模板服务器，通道:【#{channelId}】\n"
-
-    	cb()
+}"""
+            deployFilename = "#{work_dir}/deploy/#{uname}/templates_server.json"
+            fs.writeFileSync deployFilename,deployContent
+        # 提示正在使用模板服务器
+        if @cmd.channel
+            console.log "\n正在使用模板服务器，通道:【#{channelId}】\n"
+        cb()
 
     # .目录结构完整后，部署模块
     prepareComplete : (cb)->
