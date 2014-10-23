@@ -99,6 +99,10 @@ mfe.cli.run = (argv)->
         .command('dm <module>')
         .description('[deploy module] 部署模块')
         .option('-d --deploy <name>', '部署标识', list)
+    	.option('-c --channel <channelid>', '通道id', list)
+    	.option('-f --cleanup', '部署前清空通道', list)
+    	.option('-p --package', '生成打包id', list)
+    	.option('-o --online', '部署模板包到线上', list)
         .action (name, cmd)->
             new ModuleDeploy name,cmd,(err)->
                 if err

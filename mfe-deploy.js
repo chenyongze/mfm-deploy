@@ -64,9 +64,9 @@ conf.parseDeploy = function(config) {
 	if(!json.name){
     	return false;
     }
-    if (json.receiver_statics === _s.trim("http://qiniu") && json.output_statics === _s.trim("qiniu")) {
-        fis.qiniu = true;
-    }
+    // if (json.receiver_statics === _s.trim("http://qiniu") && json.output_statics === _s.trim("qiniu")) {
+    //     fis.qiniu = true;
+    // }
 	conf.parseObject(json);
 	return true;
 };
