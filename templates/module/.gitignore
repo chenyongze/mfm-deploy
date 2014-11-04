@@ -65,4 +65,8 @@ tramp
 ###########################
 fis-conf.js
 
-
+#gnore sass-cache files.
+*.sass-cache*
++.sass-cache/
+**/.sass-cache
+**/.sass-cache/*
