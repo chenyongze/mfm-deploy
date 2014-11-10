@@ -31,7 +31,9 @@ class ModuleDeploy extends ModulePrepareDirectory
 {
     "domain": "http://sts0.mofang.com",
     "receiver_statics": "http://qiniu",
+    "receiver_statics": "",
     "output_statics": "qiniu",
+    "output_statics": "../aaaaa",
     "receiver_templates": "http://templates.mofang.com/receiver.php",
     "output_templates": "channel/#{channelId}",
     "name": "templates_server"
@@ -174,13 +176,16 @@ class ModuleDeploy extends ModulePrepareDirectory
             if response.statusCode isnt 200
                 console.log "release package error: #{response.statusCode}"
                 process.exit()
-            response = JSON.parse body
+	    try
+		response = JSON.parse body
+	    catch error
+		console.log response.body
             if response.code
                 if response.error
                     console.log "release package error: #{response.error}"
-            else
-                console.log "release package error: unknown"
-                process.exit()
+		else
+		    console.log "release package error: unknown"
+		    process.exit()
             console.log "\n模板版本: #{response.data}\n"
             fs.writeFileSync 'templates_version.txt',"#{response.data}\n"
         #process.exit() # debug
