@@ -35,7 +35,7 @@ function g() {
 function generate() {
   var base, i, max, min, step, str;
   base = 24;
-  min = 320;
+  min = 30;
   max = 1080;
   step = 10;
   g = function(w) {
@@ -67,7 +67,7 @@ function torem(filename) {
   if (!(/@function\s+mfe\-px2rem/ig.test(cnt))) {
     cnt = cnt.replace(/(-*\d+)\s*px/ig, "mfe-px2rem($1)");
   }
-  remfn = "@function mfe-px2rem($px) {\n    @return $px/27 + rem;\n}\n";
+  remfn = "@function mfe-px2rem($px) {\n    @return $px/24 + rem;\n}\n";
   cnt = remfn + cnt;
   return fs.writeFileSync(filename, cnt, {
     encoding: 'utf-8'
