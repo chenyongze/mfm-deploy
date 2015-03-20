@@ -7,7 +7,7 @@
         " ********************************* "
     ],
     "name": "mfe",
-    "version": "0.1.1",
+    "version": "0.1.2",
     "description": "mfe Front-end Integrated Solution",
     "main": "mfe.js",
     "bin": [
