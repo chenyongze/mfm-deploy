@@ -113,7 +113,7 @@ class ModuleDeploy extends ModulePrepareDirectory
                 if @cmd.optimize
                     cmd += " -#{@cmd.optimize}"
                     #cmd += " --verbose"
-                cmd += " -moDp"
+                cmd += " -moDp || exit $?";
                 cmds.push cmd
 
         #+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=
@@ -125,7 +125,7 @@ class ModuleDeploy extends ModulePrepareDirectory
         if @cmd.optimize
             main_cmd += " -#{@cmd.optimize}"
             #main_cmd += " --verbose"
-        main_cmd += " -moDp"
+        main_cmd += " -moDp || exit $?"
         cmds.push main_cmd
 
         #+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=
@@ -142,6 +142,9 @@ class ModuleDeploy extends ModulePrepareDirectory
         # 执行布署脚本
         #+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=
         err,out = utils.work_dir_shell2! ["./release.sh"]
+        if err and err.code isnt 0
+          console.error("发布失败！", err.toString())
+          process.exit(err.code)
         fs.writeFileSync 'v.log',out
 
         #+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=

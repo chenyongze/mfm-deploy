@@ -23,6 +23,9 @@ Upgrade = require('./cmd/Upgrade').Upgrade
 
 init_user = require './init_user'
 
+# PackageInfo
+packageInfo = require(mfe.path.cli + "/package.json");
+
 range = (val)-> val.split('..').map(Number)
 
 list = (val)-> val.split ','
@@ -35,7 +38,7 @@ mfe.cli.run = (argv)->
         init_user()
         return false
     program
-        .version('0.0.1')
+        .version(packageInfo.version)
 
     # 添加业务模块 ++
     program
