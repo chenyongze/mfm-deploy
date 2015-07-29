@@ -7,7 +7,7 @@
         " ********************************* "
     ],
     "name": "mfe",
-    "version": "0.1.4",
+    "version": "0.1.5",
     "description": "mfe Front-end Integrated Solution",
     "main": "mfe.js",
     "bin": [
@@ -29,7 +29,8 @@
         "name": "lynn",
         "name": "zhaoshuai",
         "name": "pangshiqi",
-        "name": "qulong"
+        "name": "qulong",
+        "name": "xukuikui"
     },
     "license": "MIT",
     "dependencies": {
